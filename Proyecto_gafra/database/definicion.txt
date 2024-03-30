@@ -1,0 +1,45 @@
+Nombre del Proyecto: Sistema de Gestión de Inventarios para Productos de Bebés (BabyInventory)
+
+Descripción:
+BabyInventory es un sistema de gestión de inventarios diseñado para ayudar a empresas que se especializan
+en productos para bebés a administrar eficientemente sus inventarios. La aplicación proporciona herramientas
+para registrar los productos producidos, mantener un control de los insumos utilizados en la producción,
+gestionar las solicitudes de insumos y mantener un registro de los proveedores.
+
+Características Principales:
+
+Inicio de Sesión Seguro:
+
+Los usuarios pueden iniciar sesión de manera segura utilizando su correo electrónico y contraseña.
+Gestión de Usuarios:
+
+El administrador puede agregar, editar y eliminar usuarios.
+Los usuarios pueden tener roles de administrador u operario, con diferentes niveles de acceso y privilegios.
+Registro de Productos Producidos:
+
+Los operarios pueden registrar los productos que han sido producidos, especificando el producto, la cantidad y la fecha de producción.
+Los detalles de la producción se registran automáticamente junto con la identificación del operario responsable.
+Registro de Insumos Utilizados:
+
+Los operarios pueden registrar los insumos utilizados en la producción, especificando el tipo de insumo,
+la cantidad y la fecha de modificación.
+
+Los insumos se pueden asociar con el operario responsable y, opcionalmente, con el proveedor correspondiente.
+Gestión de Solicitudes de Insumos:
+
+Los operarios pueden enviar solicitudes de insumos al administrador, especificando el tipo de insumo y la cantidad requerida.
+El administrador puede revisar las solicitudes pendientes, aprobarlas o rechazarlas según sea necesario.
+Registro de Proveedores:
+
+El administrador puede agregar, editar y eliminar proveedores.
+Se mantiene un registro de la información de contacto de cada proveedor, incluyendo nombre, dirección, teléfono y correo electrónico.
+Beneficios:
+
+Optimización de la gestión de inventarios, lo que lleva a una mejor planificación de la producción y una reducción de costos.
+Mayor transparencia y trazabilidad en el proceso de producción y gestión de insumos.
+Facilita la comunicación entre los operarios y el administrador mediante el sistema de solicitudes de insumos.
+Ayuda a mantener relaciones sólidas con los proveedores al mantener un registro centralizado de su información y facilitar
+la comunicación.
+
+BabyInventory proporciona una solución integral para la gestión de inventarios de productos para bebés, mejorando
+la eficiencia operativa y contribuyendo al éxito a largo plazo de las empresas del sector.
