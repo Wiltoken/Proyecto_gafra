@@ -332,7 +332,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
             <h3 class="custom-button-text">Insumos</h3>
             <img src="../../../assets/inventario_ins.png" alt="Insumos">
         </a>
-        <a class="custom-button">
+        <a class="custom-button" href="\Proyecto_gafra\views\SolicitudesOper\index.php">
             <h3 class="custom-button-text">Solicitudes</h3>
             <img src="../../../assets/solicitud.png" alt="Solicitudes">
         </a>

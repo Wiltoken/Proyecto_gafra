@@ -145,7 +145,7 @@
     <div class="container">
         <div class="logo-container">
             <div class="logo">
-                <img src="../assets/logo_grafa.png" alt="Logo de la empresa">
+                <img src="/Proyecto_gafra/assets/logo_grafa.png" alt="Logo de la empresa">
             </div>
             <div class="linea-separadora"></div>
         </div>
@@ -158,7 +158,7 @@
                 <p>Misión: "En nuestra empresa nos comprometemos a diseñar y fabricar productos seguros, cómodos y funcionales que mejoren la vida de los bebés y sus familias. Nos esforzamos por mantener los más altos estándares de calidad, seguridad y sostenibilidad en cada etapa de nuestro proceso de producción, mientras promovemos un entorno de trabajo positivo y colaborativo. Buscamos inspirar confianza en nuestros clientes, creando soluciones innovadoras que faciliten el cuidado y el desarrollo saludable de los más pequeños."</p>
             </div>
             <div class="login-button">
-                <a href="../views/login.php">Ingresar</a>
+                <a href="/Proyecto_gafra/views/login.php">Ingresar</a>
             </div>
         </div>
     </div>

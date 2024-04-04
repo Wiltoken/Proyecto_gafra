@@ -321,8 +321,8 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
                 <h3 class="custom-button-text">Insumos</h3>
                 <img src="../../../assets/inventario_ins.png" alt="Insumos">
             </a>
-            <a class="custom-button">
-                <h3 class="custom-button-text">Solicitudes</h3>
+            <a class="custom-button" href="\Proyecto_gafra\views\SolicitudesAdmi\index.php">
+                <h3 class = "custom-button-text" >Solicitudes</h3>
                 <img src="../../../assets/solicitud.png" alt="Solicitudes">
             </a>
             <a class="custom-button" href="/dashboard/Proyecto_gafra/index.php?controller=proveedores&action=proveedores">
