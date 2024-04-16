@@ -42,19 +42,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } else if ($_SESSION['tipo_usuario'] == 'operario_corte') { // Corregido el chequeo del tipo de usuario
                 header("Location: ../views/usuario/dashboardHomeOper/dashboard.php");
                 exit();
-            } 
-            else if ($_SESSION['tipo_usuario'] == 'operario_ensamble') { // Corregido el chequeo del tipo de usuario
+            } else if ($_SESSION['tipo_usuario'] == 'operario_ensamble') { // Corregido el chequeo del tipo de usuario
                 header("Location: ../views/usuario/dashboardHomeOper/dashboard.php");
                 exit();
-            }
-            else if ($_SESSION['tipo_usuario'] == 'operario_tuberia') { // Corregido el chequeo del tipo de usuario
+            } else if ($_SESSION['tipo_usuario'] == 'operario_tuberia') { // Corregido el chequeo del tipo de usuario
                 header("Location: ../views/usuario/dashboardHomeOper/dashboard.php");
                 exit();
-            }
-            else if ($_SESSION['tipo_usuario'] == 'operario_satelite') { // Corregido el chequeo del tipo de usuario
+            } else if ($_SESSION['tipo_usuario'] == 'operario_satelite') { // Corregido el chequeo del tipo de usuario
                 header("Location: ../views/usuario/dashboardHomeOper/dashboard.php");
                 exit();
-            }else {
+            } else {
                 // Tipo de usuario no reconocido
                 $error = "Tipo de usuario no reconocido";
             }
@@ -73,86 +70,88 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="../assets/styles.css">
-    <!-- Estilos CSS adicionales -->
-    <style>
-        /* Estilos específicos para el formulario de inicio de sesión */
-        .login-container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f0f0f0;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .login-container h2 {
-            margin-bottom: 20px;
-            color: #01B1EA;
-        }
-
-        .login-container .form-group {
-            margin-bottom: 20px;
-        }
-
-        .login-container label {
-            font-weight: bold;
-            color: #333333;
-        }
-
-        .login-container input[type="email"],
-        .login-container input[type="password"] {
-            width: 95%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-top: 5px;
-        }
-
-        .login-container button[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #01B1EA;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .login-container button[type="submit"]:hover {
-            background-color: #0088CC;
-        }
-
-        .error-message {
-            color: red;
-            text-align: center;
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
 </head>
+
 <body>
-    <div class="login-container">
-        <h2>Iniciar Sesión</h2>
-        <form action="" method="post">
-            <div class="form-group">
-                <label for="correo">Correo Electrónico:</label>
-                <input type="email" id="correo" name="correo" required>
+    <div class="container-form register">
+        <div class="information">
+            <div class="info-childs">
+                <img src="img/logo_grafa.png" alt="Logo de la empresa">
+                <p>Te damos la bienvenida a nuestra plataforma, donde podrás explorar todos los detalles de nuestra
+                    empresa. Descubre nuestra visión y misión para conocer más sobre nosotros.</p>
+                <input type="button" value="Iniciar Sesión" id="sign-in">
             </div>
-            <div class="form-group">
-                <label for="clave_acceso">Contraseña:</label>
-                <input type="password" id="clave_acceso" name="clave_acceso" required>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>GAFRA</h2>
+                <div class="vision">
+                    <h3>Visión</h3>
+                    <p>Ser la marca líder global en la fabricación de productos innovadores y de alta calidad para
+                        bebés, reconocidos por nuestra excelencia en diseño, seguridad y cuidado del medio ambiente.</p>
+                </div>
+                <div class="mission">
+                    <h3>Misión</h3>
+                    <p>Comprometernos a diseñar y fabricar productos seguros, cómodos y funcionales que mejoren la vida
+                        de los bebés y sus familias, manteniendo altos estándares de calidad, seguridad y
+                        sostenibilidad, mientras inspiramos confianza en nuestros clientes y facilitamos el desarrollo
+                        saludable de los más pequeños.</p>
+                </div>
             </div>
-            <?php if(isset($error)) { ?>
-                <p class="error-message"><?php echo $error; ?></p>
-            <?php } ?>
-            <button type="submit">Iniciar Sesión</button>
-        </form>
+        </div>
     </div>
+    <div class="container-form login hide">
+        <div class="information">
+            <div class="info-childs">
+                <img src="img/logo_grafa.png" alt="Logo de la empresa">
+                <h2>GAFRA</h2>
+                <p> Bienvenido a nuestra plataforma de gestión de inventario. Optimiza tu almacenamiento y control de
+                    productos hoy mismo.</p>
+                <input type="button" value="Conocer más" id="sign-up">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Iniciar Sesión</h2>
+                <div class="icons">
+                    <i class='bx bxs-book-bookmark'></i>
+                </div>
+                <p>¿Necesitas ayuda?</p>
+                <form action="" method="post" class="form">
+                    <div>
+                        <label>
+                            <i class='bx bx-envelope'></i>
+                            <input type="email" placeholder="Correo Electrónico" name="correo">
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <i class='bx bx-lock-alt'></i>
+                            <input type="password" placeholder="Contraseña" name="clave_acceso">
+                        </label>
+                    </div>
+                    <input type="submit" value="Iniciar Sesión">
+                    <div class="alerta-error">Todos los campos son obligatorios</div>
+                    <div class="alerta-exito">Te registraste correctamente</div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/login.js"></script>
 </body>
+
 </html>

@@ -23,9 +23,11 @@ if(isset($_GET['controller'])){
                 // Llamar al método 'operarios' directamente en el controlador
                 $controlador->operarios();
             } else if ( $action === 'proveedores') {
-        
                 // Llamar a la acción especificada
                 $controlador->proveedores();
+            }else if ($action === 'solicitudes') {
+                    // Llamar a la acción 'solicitudes'
+                    $controlador->solicitudes();
             } else {
                 $controlador->$action();
             }
@@ -38,6 +40,7 @@ if(isset($_GET['controller'])){
     }
 } else {
     // Si no se especifica un controlador, redirigir a la página principal
-    require_once 'views/indexHome.php';
+    require_once 'views\login.php';
 }
 ?>
+

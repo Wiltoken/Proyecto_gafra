@@ -24,7 +24,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
     // Destruir la sesión
     session_destroy();
     // Redirigir al usuario a la página indexHome.php
-    header("Location: ../../indexHome.php");
+    header("Location: ../../login.php");
     exit;
 }
 ?>
@@ -309,7 +309,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
     <main>
         <div id="menu" class="menu-buttons">
             <!-- Continúa con los demás elementos del menú -->
-            <a class="custom-button" href="/dashboard/Proyecto_gafra/index.php?controller=usuarios&action=operarios">
+            <a class="custom-button" href="/Proyecto_gafra/index.php?controller=usuarios&action=operarios">
                 <h3 class="custom-button-text">Operarios</h3>
                 <img src="../../../assets/coordinador.png" alt="Operarios">
             </a>
@@ -325,7 +325,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
                 <h3 class = "custom-button-text" >Solicitudes</h3>
                 <img src="../../../assets/solicitud.png" alt="Solicitudes">
             </a>
-            <a class="custom-button" href="/dashboard/Proyecto_gafra/index.php?controller=proveedores&action=proveedores">
+            <a class="custom-button" href="/Proyecto_gafra/index.php?controller=proveedores&action=proveedores">
                 <h3 class="custom-button-text">Proveedores</h3> <!-- Cambiado el texto -->
                 <img src="../../../assets/mensajero.png" alt="Proveedores"> <!-- Cambiada la imagen -->
             </a>

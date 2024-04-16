@@ -34,7 +34,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
     // Destruir la sesión
     session_destroy();
     // Redirigir al usuario a la página indexHome.php
-    header("Location: ../../indexHome.php");
+    header("Location: ../../login.php");
     exit;
 }
 ?>
@@ -324,11 +324,11 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
 <main>
     <div id="menu" class="menu-buttons">
         <!-- Continúa con los demás elementos del menú -->
-        <a class="custom-button" href="/dashboard/Proyecto_gafra/index.php?controller=usuarios&action=operarios">
+        <a class="custom-button" href="/Proyecto_gafra/index.php?controller=usuarios&action=operarios">
             <h3 class="custom-button-text">Inventario</h3>
             <img src="../../../assets/inventario.png" alt="Inventario">
         </a>
-        <a class="custom-button">
+        <a class="custom-button" href="\Proyecto_gafra\Solicitudes\inicio.php">
             <h3 class="custom-button-text">Insumos</h3>
             <img src="../../../assets/inventario_ins.png" alt="Insumos">
         </a>

@@ -6,7 +6,7 @@ class UsuariosController {
     public function __construct(){
 
     }
-
+  
     public function index(){
         $usuarios_model = new Usuarios(); 
         $usuarios = $usuarios_model->get_usuarios(); 

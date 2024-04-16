@@ -8,6 +8,6 @@ $_SESSION = array();
 session_destroy();
 
 // Redirigir al formulario de inicio de sesión
-require_once '../views/login.php';
+require_once '..\views\login.php';
 exit;
 ?>

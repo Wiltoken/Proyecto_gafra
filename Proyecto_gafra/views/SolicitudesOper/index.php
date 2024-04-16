@@ -15,6 +15,8 @@ require_once 'C:\xampp\htdocs\Proyecto_gafra\views\SolicitudesOper\head\head.php
 
 <body>
     <div class="container">
+        <div class="tabla-botones">
+        </div>
         <div class="row justify-content-center">
             <div class="col-lg-10 p-4">
                 <div class="table-responsive">
@@ -30,45 +32,28 @@ require_once 'C:\xampp\htdocs\Proyecto_gafra\views\SolicitudesOper\head\head.php
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>2024-03-30</td>
-                                <td>Solicitud de vacaciones</td>
-                                <td>Pendiente</td>
-                                <td>123</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm">Actualizar</button>
-                                    <button class="btn btn-danger btn-sm">Eliminar</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>2024-04-01</td>
-                                <td>Compra de suministros</td>
-                                <td>Aprobado</td>
-                                <td>456</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm">Actualizar</button>
-                                    <button class="btn btn-danger btn-sm">Eliminar</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>2024-04-02</td>
-                                <td>Revisión de código</td>
-                                <td>Rechazado</td>
-                                <td>789</td>
-                                <td>
-                                    <button class="btn btn-primary btn-sm">Actualizar</button>
-                                    <button class="btn btn-danger btn-sm">Eliminar</button>
-                                </td>
-                            </tr>
+                            <?php if (isset($data["solicitudes"]) && is_array($data["solicitudes"])) : ?>
+                                <?php foreach ($data["solicitudes"] as $solicitud) : ?>
+                                    <tr>
+                                        <td><input type="checkbox" class="row-checkbox" data-solicitud-id="<?php echo $solicitud['id']; ?>"></td>
+                                        <td><?php echo $solicitud['id']; ?></td>
+                                        <td><?php echo $solicitud['fecha_solicitud']; ?></td>
+                                        <td><?php echo $solicitud['descripcion']; ?></td>
+                                        <td><?php echo $solicitud['estado']; ?></td>
+                                        <td><?php echo $solicitud['id_usuario']; ?></td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm">Actualizar</button>
+                                            <button class="btn btn-danger btn-sm">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            <?php else : ?>
+                            <?php endif; ?>
                         </tbody>
                     </table>
                 </div>
                 <<div class="text-center">
-                    <a href="\Proyecto_gafra\views\SolicitudesOper\crear.php" class="btn btn-success">Agregar</a>
-                    <a href="\Proyecto_gafra\views\SolicitudesOper\historial.php" class="btn btn-info">Historial de Solicitudes</a>
+                    <a href="\Proyecto_gafra\views\SolicitudesOper\crear.php" href='index.php?controller=solicitudes&action=nuevo' class="btn btn-success">Agregar</a>
             </div>
 
         </div>
