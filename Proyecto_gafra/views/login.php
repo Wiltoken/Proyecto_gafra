@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container-form register">
         <div class="information">
             <div class="info-childs">
-                <img src="img/logo_grafa.png" alt="Logo de la empresa">
+                <img src="img/Logo.png" alt="Logo de la empresa">
                 <p>Te damos la bienvenida a nuestra plataforma, donde podrás explorar todos los detalles de nuestra
                     empresa. Descubre nuestra visión y misión para conocer más sobre nosotros.</p>
                     <input type="button" value="Iniciar Sesión" id="sign-in">
@@ -115,8 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container-form login hide">
         <div class="information">
             <div class="info-childs">
-                <img src="img/logo_grafa.png" alt="Logo de la empresa">
-                <h2>GAFRA</h2>
+                <img src="img/Logo.png" alt="Logo de la empresa">
                 <p> Bienvenido a nuestra plataforma de gestión de inventario. Optimiza tu almacenamiento y control de
                     productos hoy mismo.</p>
                 <input type="button" value="Conocer más" id="sign-up">
