@@ -6,25 +6,29 @@
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-image: url(img/a.jpg);
-    background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(img/a.jpg); /* Cambia la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fija la imagen de fondo */
 }
 
 .form-information-childs {
   width: 200%;
   margin: 20px auto;
 }
+
+
 .info-childs h2 {
-  color: #333; 
-  font-size: 2rem; 
-  font-weight: bold; 
-  text-align: center; 
-  text-transform: uppercase; 
-  margin-bottom: 20px; 
+  color: #55f; /* Cambia el color del título */
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .icons {
@@ -33,45 +37,38 @@ body {
 }
 
 .icons i {
-  font-size:14px;
+  font-size: 14px;
 }
+
 .vision,
 .mission {
-  border: 1px solid #ccc; /* Agrega un borde alrededor de los textos */
-  border-radius: 10px; /* Añade bordes redondeados */
-  padding: 10px; /* Ajusta el espacio interior */
-  margin-bottom: 20px; /* Espacio inferior */
-  max-width: 400px; /* Define el ancho máximo del contenedor */
+  border: 1px solid #ccc; /* Cambia el color del borde */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  max-width: 400px;
 }
 
 .vision h3,
 .mission h3 {
   font-weight: bold;
-  color: #333;
+  color: #fff; /* Cambia el color del título */
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-.vision,
-.mission {
-  border: 1px solid #ccc; 
-  border-radius: 10px; 
-  padding: 20px; 
-  margin: 0 auto; 
-  margin-bottom: 20px; 
-}
-
 .info-childs img {
   display: block;
-  margin: 20px auto; 
-  width: 200px; 
-  height: 220px; 
+  margin: 20px auto;
+  width: 200px;
+  height: 220px;
 }
 
 .info-childs p {
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
+  color: #fff; /* Cambia el color del texto */
 }
-
 
 .container-form {
   display: flex;
@@ -88,7 +85,7 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  background-color: #c7eef3;
+  background-color: #007bff; /* Cambia el color de fondo */
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
@@ -97,28 +94,31 @@ body {
   width: 100%;
   padding: 0 30px;
 }
-
+.info-childs h2{
+  color: #fff;
+}
 
 .info-childs p {
-  margin: 15px 0 ;
-  color: #555;
+  margin: 15px 0;
+  color: #fff; /* Cambia el color del texto */
 }
 
 .info-childs input {
   background-color: transparent;
   outline: none;
-  border: solid 2px #9191bd;
+  border: solid 2px #fff; /* Cambia el color del borde */
   border-radius: 20px;
   padding: 10px 20px;
-  color: #9191bd;
+  color: #fff; /* Cambia el color del texto */
+  font-weight: bold;
   cursor: pointer;
   transition: background-color .3s ease;
 }
 
 .info-childs input:hover {
-  background-color: #9191bd;
+  background-color: #0050e6;
   border: none;
-  color: #fff;
+  color: #fff; /* Cambia el color del texto */
   box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
 }
 
@@ -128,7 +128,7 @@ body {
   justify-content: center;
   width: 60%;
   text-align: center;
-  background-color: #f8f8f8;
+  background-color: #333333; /* Cambia el color de fondo */
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -138,19 +138,17 @@ body {
 }
 
 .form-information-childs h2 {
-  color: #333; 
-  font-size: 2rem; 
-  font-weight: bold; 
-  text-transform: uppercase; 
-  text-align: center; 
-  margin-bottom: 20px; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
- 
+  color: #fff; /* Cambia el color del título */
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-
 .form-information-childs p {
-  color: #555;
+  color: #fff; /* Cambia el color del texto */
 }
 
 .icons {
@@ -162,22 +160,21 @@ body {
   padding: 15px;
   cursor: pointer;
   margin: 0 10px;
-  color: #9191bd;
-  border: solid thin #9191bd;
+  color: #007bff; /* Cambia el color del ícono */
+  border: solid thin #007bff; /* Cambia el color del borde */
   transition: background-color 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
 }
 
 .icons i:hover {
   background-color: #c7c7f3;
-  color: #fff;
+  color: #fff; /* Cambia el color del texto */
 }
-
 
 .icons i {
   font-size: 36px;
-  color: #007bff;
 }
+
 .form {
   margin: 30px 0 0 0;
 }
@@ -186,39 +183,41 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+  color: #fff;
   border-radius: 20px;
   padding: 0 10px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+  background-color: #333333; /* Cambia el color de fondo */
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
 }
 
 .form label input {
   width: 100%;
   padding: 10px;
-  background-color: #fff;
+  background-color: #333333; /* Cambia el color de fondo */
   border: none;
   outline: none;
   border-radius: 20px;
-  color: #333;
+  color: #fff; /* Cambia el color del texto */
 }
 
 .form label i {
-  color: #a7a7a7;
+  color: #fff;
 }
 
 .form input[type="submit"] {
-  background-color: #9191bd;
-  color: #fff;
+  background-color: #333333; /* Cambia el color de fondo */
+  color: #ffffff; /* Cambia el color del texto */
+  border: solid 2px #fff; 
   border-radius: 20px;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
   margin-top: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
 }
 
 .form input[type="submit"]:hover {
-  background-color: #7a7a9a;
+  background-color: #0050e6;
 }
 
 .hide {
@@ -226,13 +225,7 @@ body {
   transform: translateY(-300%);
 }
 
-
-.hide {
-  position: absolute;
-  transform: translateY(-300%);
-}
-
-/*PERSONALIZACION DE MIS ALERTAS Y MENSAJES */
+/* PERSONALIZACIÓN DE MIS ALERTAS Y MENSAJES */
 .form div .alerta {
   width: 290px;
   text-align: left;
@@ -268,15 +261,14 @@ body {
   outline: solid 2px #9d2222;
 }
 
-/*RESPONSIVE FORM*/
-
-@media screen and (max-width:750px) {
+/* RESPONSIVE FORM */
+@media screen and (max-width: 750px) {
   html {
     font-size: 12px;
   }
 }
 
-@media screen and (max-width:580px) {
+@media screen and (max-width: 580px) {
   html {
     font-size: 15px;
   }
@@ -302,4 +294,3 @@ body {
     border-top-right-radius: 0;
   }
 }
-

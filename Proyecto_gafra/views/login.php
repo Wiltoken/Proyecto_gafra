@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <img src="img/logo_grafa.png" alt="Logo de la empresa">
                 <p>Te damos la bienvenida a nuestra plataforma, donde podrás explorar todos los detalles de nuestra
                     empresa. Descubre nuestra visión y misión para conocer más sobre nosotros.</p>
-                <input type="button" value="Iniciar Sesión" id="sign-in">
+                    <input type="button" value="Iniciar Sesión" id="sign-in">
             </div>
         </div>
         <div class="form-information">
@@ -153,5 +153,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="js/register.js"></script>
     <script src="js/login.js"></script>
 </body>
-
 </html>
