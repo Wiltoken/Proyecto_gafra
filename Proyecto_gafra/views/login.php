@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/style.css">
     <title>Login</title>
 </head>
 
@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container-form register">
         <div class="information">
             <div class="info-childs">
-                <img src="img/Logo.png" alt="Logo de la empresa">
+                <img src="../assets/img/Logo.png" alt="Logo de la empresa">
                 <p>Te damos la bienvenida a nuestra plataforma, donde podrás explorar todos los detalles de nuestra
                     empresa. Descubre nuestra visión y misión para conocer más sobre nosotros.</p>
                     <input type="button" value="Iniciar Sesión" id="sign-in">
@@ -115,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container-form login hide">
         <div class="information">
             <div class="info-childs">
-                <img src="img/Logo.png" alt="Logo de la empresa">
+                <img src="../assets/img/Logo.png" alt="Logo de la empresa">
                 <p> Bienvenido a nuestra plataforma de gestión de inventario. Optimiza tu almacenamiento y control de
                     productos hoy mismo.</p>
                 <input type="button" value="Conocer más" id="sign-up">
@@ -148,8 +148,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </div>
-    <script src="js/script.js"></script>
-    <script src="js/register.js"></script>
-    <script src="js/login.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/register.js"></script>
+    <script src="../assets/js/login.js"></script>
 </body>
 </html>

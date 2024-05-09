@@ -28,317 +28,135 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
     exit;
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de administrador</title>
-    <link rel="stylesheet" href="../assets/styles.css">
-    <style>
-        /* Estilos específicos para este archivo */
-        body {
-            padding: 20px;
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #f5f5dc; /* Crema */
-        }
-
-        a {
-            color: #01B1EA;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #555555;
-        }
-
-        /* Estilos para el contenedor principal */
-        .container {
-            max-width: 1200px;
-            margin: 20px auto; /* Agregado margen superior e inferior */
-            display: flex;
-            flex-direction: column; /* Para alinear el footer al final */
-            min-height: 100vh; /* Para que el contenido ocupe al menos toda la altura de la ventana */
-        }
-
-        /* Estilos para el aside */
-        #lateral {
-    width: 96%;
-    padding: 20px;
-    background-color: #01B1EA;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-#lateral img {
-    width: 200px;
-    height: 250px;
-    margin-right: 20px;
-}
-
-#lateral h1 {
-    font-size: 100px;
-    color: black;
-    margin: 0;
-    text-align: left;
-    flex-grow: 1;
-    margin-top: 0; /* Eliminamos el margen superior */
-}
-
-.user-info-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.user-info-container img {
-    width: 200px;
-    height: 250px;
-    margin-right: 20px;
-}
-
-.user-info-container h1 {
-    margin: 0;
-    color: black;
-    font-family: Arial, sans-serif;
-}
-
-.datos_usuario {
-    background-color: #f5f5dc;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.datos_usuario p {
-    
-    margin: 10px 0;
-    color: #333;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-}
-#user-info {
-            color: black; /* Color de texto */
-            margin-top: 10px; /* Espacio entre el título y la información del usuario */
-            background-color: #f0f0f0; /* Fondo */
-            padding: 10px; /* Espaciado interno */
-            border-radius: 10px; /* Bordes redondeados */
-        }
-
-        #user-info p {
-            margin: 5px 0; /* Espaciado entre cada línea de información */
-        }
-
-        .custom-text {
-            margin: 5px 0;
-        }
-
-        /* Estilos para el contenido principal */
-        main {
-            flex-grow: 1;
-            padding: 20px;
-            display: flex; /* Modificado */
-            flex-wrap: wrap; /* Modificado */
-            justify-content: space-between; /* Modificado */
-        }
-
-        /* HEADER */
-        #header {
-            height: 80px;
-            background-color: #f0f0f0; /* Color de fondo principal */
-            background-image: linear-gradient(45deg, #85c1e9, #f0f0f0, #f5b041); /* Gradiente de colores */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            padding: 0 20px;
-        }
-
-        #header img {
-            width: 25px;
-            height: 25px;
-        }
-
-        #header nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        #header nav h1 {
-            margin: 0;
-            font-size: 24px;
-            color: #01B1EA;
-        }
-
-        /* MENU */
-        #menu {
-            justify-content: center;
-            clear: both;
-            color: white;
-            border-bottom: 4px solid #01B1EA;
-            margin-bottom: 20px;
-            padding: 5px;
-            position: relative;
-            transform: translate(0%, 10%);
-        }
-
-        .menu-buttons {
-            display: flex;
-            flex-wrap: wrap; /* Modificado */
-            justify-content: space-between;
-            position: relative;
-            z-index: 1;
-        }
-
-        .custom-button {
-            width: calc(20% - 40px); /* Distribuir el espacio equitativamente */
-            max-width: 250px; /* Límite de ancho */
-            height: 350px; /* Reduzco un poco la altura */
-            border-radius: 20px;
-            background-color: #01B1EA;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative; /* Añado posición relativa para superponer */
-            z-index: 1; /* Añado un índice z para controlar la superposición */
-            margin-bottom: 20px; /* Modificado */
-        }
-
-        .custom-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            z-index: 2; /* Aumento el índice z al pasar el ratón para que se superpongan más */
-        }
-
-        .custom-button img {
-            width: 100%;
-            height: auto;
-        }
-
-        .custom-button-text {
-            position: absolute;
-            bottom: 10px;
-            left: 0;
-            width: 100%;
-            margin: 0;
-            padding: 0 10px;
-            color: black;
-            font-size: 14px;
-            line-height: 20px;
-            transition: bottom 0.3s ease;
-        }
-
-        .custom-button:hover .custom-button-text {
-            bottom: 0;
-        }
-
-        /* Estilos para el footer */
-        footer {
-            background-color: #222222;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: auto; /* Ajusto el margen superior automáticamente */
-            width: 100%;
-            border-radius: 10px;
-        }
-        
-        .logout-button {
-            width: auto; /* Cambiado a 'auto' para ajustarse al contenido */
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px; /* Reducido el padding */
-            background-color: #000000; /* Rojo */
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            position: fixed; /* Cambiado a posición fija */
-            bottom: 20px; /* Alineado al borde inferior */
-            right: 20px; /* Alineado al borde derecho */
-        }
-
-        .logout-button:hover {
-            background-color: #ff0000; /* Rojo más oscuro al pasar el mouse */
-        }
-
-        @media screen and (max-width: 768px) {
-            .custom-button {
-                width: calc(33.33% - 20px); /* Distribuir el espacio equitativamente en dispositivos peque */
-                max-width: none; /* Ajustar el ancho máximo */
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .custom-button {
-                width: calc(50% - 20px); /* Distribuir el espacio equitativamente en dispositivos aún más pequeños */
-            }
-        }
-    </style>
+    <title>Documento</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../../assets/styleAdmin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-<header id="header">
-    <nav>
-        <h1>Industrias Gafra</h1>
-        <div>
-            <img src="../../../assets/boton-de-notificaciones.png" alt="Notificaciones">
-        </div>
-    </nav>
-</header>
-<div class="container">
-<aside id="lateral">
-    <div class="user-info-container">
-        <img src="../../../assets/Avatar.png" alt="Avatar">
-        <div  class="datos_usuario">
-        <?php if(isset($_SESSION['nombre']) && isset($_SESSION['apellido']) && isset($_SESSION['email']) && isset($_SESSION['telefono'])) { ?>
-            <h1><p><?php echo $_SESSION['tipo_usuario']; ?></p></h1>
-            <div>
-                    <p>Nombre: <?php echo $_SESSION['nombre']; ?></p>
-                    <p>Apellido: <?php echo $_SESSION['apellido']; ?></p>
-                    <p>Correo: <?php echo $_SESSION['email']; ?></p>
-                    <p>Teléfono: <?php echo $_SESSION['telefono']; ?></p>
-                <?php } else { ?>
-                    <p>No se en contraron datos de usuario en la sesión.</p>
-                <?php } ?>
+    <header class="header">
+        <a href="#" class="logo">Gafra</a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon" ></i>
+        </label>
+
+        <nav class="navbar">
+            <a href="#" style="--i:0;">Inicio</a>
+            <a href="#" style="--i:2;">Servicios</a>
+            <a href="#" style="--i:3;">Contactanos</a>
+            <a href="#" style="--i:1;">Acerca de</a>
+            <a href="?logout=true" style="--i:4;">Cerrar sesión</a>
+        </nav>
+    </header>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="card swiper-slide">
+                <div class="card__image">
+                    <img src="../../../assets/img/coordinador.png" alt="card image">
+                </div>
+                <div class="card__content">
+                    <span class="card__title">Operarios</span>
+                    <p class="card__text">El administrador tiene el control total para asignar roles y realizar cambios,
+                        garantizando una integración fluida y eficiente para todos los usuarios.</p>
+                    <a class="custom-button" href="/Proyecto_gafra/index.php?controller=usuarios&action=operarios">
+                        <button class="card__btn">ENTRAR</button>
+                    </a>
+                </div>
             </div>
+            <div class="card swiper-slide">
+                <div class="card__image">
+                    <img src="../../../assets/img/inventario.png" alt="card image">
+                </div>
+
+                <div class="card__content">
+                    <span class="card__title">Inventario</span>
+                    <p class="card__text">Permite a los usuarios administrar inventarios de manera efectiva, con el
+                        administrador teniendo el control total para realizar ajustes y asignaciones</p>
+                    <button class="card__btn">ENTRAR</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card swiper-slide">
+                <div class="card__image">
+                    <img src="../../../assets/img/inventario_ins.png" alt="card image">
+                </div>
+
+                <div class="card__content">
+                    <span class="card__title">Insumo</span>
+                    <p class="card__text"> Es la herramienta clave para garantizar un flujo óptimo de insumos en el
+                        proceso de producción o servicio."</p>
+                    <button class="card__btn">ENTRAR</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card swiper-slide">
+                <div class="card__image">
+                    <img src="../../../assets/img/solicitud.png" alt="card image">
+                </div>
+
+                <div class="card__content">
+                    <span class="card__title">Solicitudes</span>
+                    <p class="card__text">Permite a los usuarios enviar solicitudes, con el administrador supervisando y
+                        coordinando el proceso</p>
+                    <a class="custom-button" href="\Proyecto_gafra\views\SolicitudesAdmi\index.php">
+                        <button class="card__btn">ENTRAR</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card swiper-slide">
+                <div class="card__image">
+                    <img src="../../../assets/img/mensajero.png" alt="card image">
+                </div>
+
+                <div class="card__content">
+                    <span class="card__title">Proveedores</span>
+                    <p class="card__text">Es fundamental para asegurar relaciones eficientes y transparentes con los
+                        proveedores, garantizando un suministro constante de productos y servicios de calidad. </p>
+                    <a class="custom-button" href="/Proyecto_gafra/index.php?controller=proveedores&action=proveedores">
+                        <button class="card__btn">ENTRAR</button>
+                    </a>            
+                </div>
+            </div>
+
         </div>
-        <h1>Administrador</h1>
+        <div class="swiper-pagination"></div>
     </div>
-</aside>
 
-    <main>
-        <div id="menu" class="menu-buttons">
-            <!-- Continúa con los demás elementos del menú -->
-            <a class="custom-button" href="/Proyecto_gafra/index.php?controller=usuarios&action=operarios">
-                <h3 class="custom-button-text">Operarios</h3>
-                <img src="../../../assets/coordinador.png" alt="Operarios">
-            </a>
-            <a class="custom-button">
-                <h3 class="custom-button-text">Inventario</h3>
-                <img src="../../../assets/inventario.png" alt="Inventario">
-            </a>
-            <a class="custom-button">
-                <h3 class="custom-button-text">Insumos</h3>
-                <img src="../../../assets/inventario_ins.png" alt="Insumos">
-            </a>
-            <a class="custom-button" href="\Proyecto_gafra\views\SolicitudesAdmi\index.php">
-                <h3 class = "custom-button-text" >Solicitudes</h3>
-                <img src="../../../assets/solicitud.png" alt="Solicitudes">
-            </a>
-            <a class="custom-button" href="/Proyecto_gafra/index.php?controller=proveedores&action=proveedores">
-                <h3 class="custom-button-text">Proveedores</h3> <!-- Cambiado el texto -->
-                <img src="../../../assets/mensajero.png" alt="Proveedores"> <!-- Cambiada la imagen -->
-            </a>
-        </div>
-        <div class="logout-button">
-            <a href="?logout=true">Cerrar sesión</a>
-        </div>
-    </main>
+    <script src= "https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" ></script>
 
-</div>
-<footer>
-    <p>2024®️ Gafra todos los derechos reservados</p>
-</footer>
+    <script>
+        var swiper = new Swiper (".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 300,
+                modifier: 1,
+                slideShadows: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
 </body>
-</html>
 
+</html>
