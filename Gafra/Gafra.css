@@ -1,0 +1,425 @@
+/* Estilos para el botón de ir a inicio */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa; /* Color de fondo suave */
+}
+
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* Color de fondo blanco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.Titulo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav {
+    background-color: #007bff; /* Color de fondo del menú */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    color: #ffffff; /* Color del texto del menú */
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+
+
+
+.goToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.goToTop:hover {
+    background-color: #0056b3;
+}
+
+
+/* Estilo para la imagen del administrador */
+.ImagenAdministrador {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ImagenReporte{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ImagenReporte1{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ImagenReporte2{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ImagenProducido{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.info-item {
+    margin-bottom: 10px;
+}
+.ImagenGuardar{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ImagenCancelar{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.ImagenReporte4{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ImagenInsumo{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ImagenProveedor{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ImagenProveedorCrearEditar{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ImagenSolicitud{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ImagenBuscar{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ImagenCrear_Editar{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ImagenProducido1{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ImagenGuardar{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ImagenInicio_Atras{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ImagenOperario{
+    max-width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ImagenOperario1{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ImagenOperario2{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ImagenOperario3{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ImagenOperario4{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ImagenOperarioCrear{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ImagenProveedor2{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ImagenProveedor3{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ImagenProveedor4{   
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ImageLogin{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ImageLogin2{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ImageLogin3{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Ajustar el margen según sea necesario */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6 ;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+.contenedor {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Titulo {
+    color: #444242;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f0f0f0;
+    border: 2px solid #777;
+    border-radius: 10px;
+    margin-top: -5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    background-color: rgba(93, 140, 140, 0.984);
+    border: 2px solid #a3a3a3;
+    border-radius: 10px;
+    margin-top: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    margin: 10px;
+    font-size: 16px;
+    border: #a3a3a3;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    display: block;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+a:hover {
+    background-color: #00796b;
+}
+
+.Parrafo1 {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #101111;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+    color: #333;
+}
+
+.Parrafo {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Parrafo h2 {
+    color: #333;
+    border-bottom: 2px solid #009688;
+    padding-bottom: 10px;
+}
+
+.Parrafo p {
+    color: #666;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.Parrafo:hover {
+    background-color: #f2f2f2;
+    transition: background-color 0.3s ease;
+}

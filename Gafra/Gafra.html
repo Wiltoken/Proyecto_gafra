@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Gafra.css">
+    <title>Gafra - Manual de Inventario</title>
+</head>
+
+<body>
+
+ <!-- Botón para ir a inicio -->
+<button id="goToInicioButton" onclick="goToInicio()">Ir a Inicio</button>
+
+<script>
+    // Función para desplazarse al inicio
+  // Función para desplazarse al inicio
+    function goToInicio() {
+    var tituloSection = document.getElementById('Inicio');
+    if (tituloSection) {
+        tituloSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+
+    // Función para seguir al usuario
+    window.onscroll = function () { stickyButton() };
+
+    // Obtiene el botón
+    var button = document.getElementById('goToInicioButton');
+
+    // Obtiene la posición inicial del botón
+    var buttonOffset = button.offsetTop;
+
+    // Función para hacer que el botón sea pegajoso
+    function stickyButton() {
+        if (window.pageYOffset > buttonOffset) {
+            button.style.position = 'fixed';
+            button.style.bottom = '20px';
+            button.style.right = '20px';
+        } else {
+            button.style.position = 'static';
+        }
+    }
+</script>
+
+
+
+      <div class="contenedor">
+        <div id="Inicio" class="Titulo">
+
+            <h1>Bienvenido a Gafra: Manual de Usuario</h1>
+            <p>En el corazón de la eficiencia y la organización en la industria</p>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a onclick="Inicio">Inicio</a></li>
+                <li><a href="#Introduccion">Introducción</a></li>
+                <li><a href="#Login">Login</a></li>
+                <li><a href="#Administrador">Administrador</a></li>
+                <li><a href="#Operario">Operario</a></li>
+
+            </ul>
+        </nav>
+
+
+        <div id="Introduccion" class="Parrafo1"> 
+            <h1>Manual de Usuario - Proyecto Grafa</h1>
+            <p>Bienvenido al Manual de Usuario del software de inventario "Grafa". Este documento está diseñado para proporcionarte una guía completa sobre cómo utilizar eficientemente todas las funciones y características que ofrece Grafa en la gestión de inventarios.</p>
+            <p>El proyecto Grafa ha sido desarrollado con el objetivo de optimizar y simplificar el control de inventarios, brindando a los usuarios una herramienta intuitiva y poderosa para gestionar de manera efectiva los productos, seguimientos y registros asociados a la operación de su empresa.</p>
+            <p>Te invitamos a explorar este manual paso a paso, donde encontrarás instrucciones claras, consejos prácticos y ejemplos que te ayudarán a familiarizarte con todas las capacidades que Grafa tiene para ofrecer. Ya seas un nuevo usuario o estés buscando mejorar tu experiencia con el software, este manual te proporcionará los recursos necesarios para aprovechar al máximo las funciones de Grafa.</p>
+        </div>
+
+        <div id="Login" class="Parrafo">
+            <h2>Login</h2>
+
+            <p>El proceso de recuperación de contraseña generalmente consta de las siguientes etapas:</p>
+
+            <ol>
+                <li><strong>Inicio - Página de Login:</strong> Los usuarios llegan a la página de inicio de sesión donde podra saber la imformacion de nosotros como empresa le presiona donde "Iniciar Sesión" .</li>
+                <img src="Imagenes/LoginN.jpg" alt="administardor" class="ImageLogin">
+                <li><strong>Pagina de Iniciar Sesión:</strong> Los usuarios entra al Login donde tendra que ingresar que colocar su correo electrónico y su contraseña paera ingresar.</li>
+                <li><strong>Pagina de Iniciar Sesión:</strong> Aquí, puede tambien volver a la pagina anterior con solo presionar el boton de "Conocer más".</li>
+                <img src="Imagenes/LoginN2.jpg" alt="administardor" class="ImageLogin2">
+            </ol>
+
+            <p>Este proceso garantiza la seguridad al enviar un enlace único por correo electrónico y guía al usuario a través de un flujo intuitivo para restablecer su contraseña de manera segura.</p>
+        </div>
+
+
+        <div id="Administrador" class="Parrafo">
+
+            <h2>Un Administrador, Todo Bajo Control</h2>
+            <p>Gafra ofrece un único panel de administración que abarca todos los aspectos de tu proceso productivo. Desde el seguimiento de inventario hasta la gestión de pedidos, nuestro sistema proporciona un control total en manos de un solo administrador. Esto no solo facilita la toma de decisiones, sino que también mejora la coordinación entre los diferentes departamentos.</p>
+            <img src="Imagenes/AdministradorN.jpg" alt="Administrador" class="ImagenAdministrador">
+            <p><strong>Explicación Administrador:</strong> La interfaz del administrador consta de cinco módulos:</p>
+            <ul>
+                <li><strong>Operario:</strong> Dirige a la pestaña "Operarios".</li>
+                <li><strong>Inventario:</strong> Dirige a la pestaña "Reporte por Área de Inventario Producido".</li>
+                <li><strong>Insumos:</strong> Dirige a la pestaña "Inventario Insumos".</li>
+                <li><strong>Solicitudes:</strong> Dirige a la pestaña "Solicitudes".</li>
+                <li><strong>Proveedores:</strong> Dirige a la pestaña "Proveedores".</li>
+            </ul>
+
+            <p>En la capa superior se encuentran las notificaciones de algún problema o situación. Además, hay una imagen que muestra el perfil del usuario, y debajo de él se muestra el nombre, cédula y correo del usuario. En la parte inferior izquierda, hay una opción para "Cerrar Sesión" y volver a la pantalla de inicio.</p>
+
+            <h2>Administración de Operario</h2>
+            <img src="Imagenes/Operarios.png" alt="Administrador" class="ImagenOperario" >
+              <p>En este módulo, se presenta una lista detallada de operario registrados en la plataforma, incluyendo su identificación, nombre, correo, tipo de operario, usuario y clave.</p>
+              <p>La pestaña inicia con una barra de búsqueda que facilita la localización rápida de usuarios. Adyacente a esta barra se encuentra la foto de perfil del administrador, acompañada de sus datos correspondientes.</p>
+              <img src="Imagenes/Operariospartes.png" alt="administrador" class="ImagenOperario1">
+              <p>A continuación, se despliega una tabla que posibilita la creación de nuevos operarios. Es importante destacar que solo el administrador tiene la capacidad de editar, borrar y bloquear operario.</p>
+              <p>En la esquina inferior derecha se encuentran dos botones útiles: uno para retroceder y otro para regresar al inicio. En la esquina inferior izquierda, se ofrece la opción de "Cerrar Sesión", brindando al usuario la posibilidad de salir de manera rápida y segura.</p>
+              <img src="Imagenes/Operariospartes1.png" alt="administrador" class="ImagenOperario2"> <img src="Imagenes/Operariospartes2.png" alt="administrador" class="ImagenOperario3">
+              <p>La interfaz proporciona accesos directos a otras funciones mediante botones específicos para operarios, inventario, insumos, solicitudes y proveedores. Estos botones permiten una transición ágil entre módulos, eliminando la necesidad de regresar a la pestaña de inicio del administrador.</p>
+              <img src="Imagenes/Operariospartes3.png" alt="administrador" class="ImagenOperario4">
+              <p>Esta disposición intuitiva y funcional del módulo facilita la administración eficiente de usuarios y la navegación fluida entre las diversas funciones del sistema Gafra.</p>
+
+
+              <h2>Edición y Creación de Operarios</h2>
+              <img src="Imagenes/OperariosCrear.png" alt="administrador" class="ImagenOperarioCrear">
+            <p>En este módulo, el administrador tiene la capacidad de crear o editar un operario. La sección inicia con una función de búsqueda, permitiendo al administrador localizar rápidamente al operario que desea editar.</p>
+            <img src="Imagenes/Buscar.png" alt="administrador" class="ImagenBuscar">
+            <p>Una vez seleccionado el operario, se despliegan los datos correspondientes, ofreciendo al administrador la posibilidad de realizar las ediciones necesarias. Además, se brinda la opción de ingresar los datos de un nuevo operario, generando automáticamente un nombre de usuario y una contraseña.</p>
+            <img src="Imagenes/crear o editar.png" alt="administrador" class="ImagenCrear_Editar">
+            <p>En esta sección, el administrador tiene la opción de guardar los cambios realizados o cancelar la operación. Asimismo, se proporcionan enlaces para volver a la página anterior o regresar al inicio, ofreciendo una navegación fluida y eficiente.</p>
+            <img src="Imagenes/guardar.png" alt="administrador" class="ImagenGuardar">
+            <img src="Imagenes/inicio, atras.png" alt="administrador" class="ImagenInicio_Atras">
+            <p>Esta interfaz intuitiva y clara facilita la gestión de operarios, permitiendo al administrador realizar fácilmente las tareas de edición y creación, con la opción de regresar a las ubicaciones deseadas en cualquier momento.</p>
+
+
+            <h2>Reporte del Área Producida por el Operario</h2>
+            <img src="Imagenes/reporte.png" alt="administrador" class="ImagenReporte">
+            <p>En este módulo, se realiza el reporte del área producida por el operario. La interfaz comienza con un filtro de fechas, permitiendo al usuario consultar datos desde una fecha específica hasta la fecha deseada, ofreciendo flexibilidad para seleccionar rangos temporales, ya sea por días o meses.</p>
+            <img src="Imagenes/reporte1.png" alt="administrador" class="ImagenReporte1">
+            <p>En la siguiente sección, se elige el área del operario que se desea visualizar, como Tubería, Ensamble, Costura o Corte.</p>
+            <img src="Imagenes/reporte2.png" alt="administrador" class="ImagenReporte2">
+            <p>La información se presenta en una tabla con los siguientes campos:</p>
+            <ul>
+                <li><strong>Código:</strong> Proporciona un código único asignado al operario para identificación exclusiva.</li>
+                <li><strong>Fecha:</strong> Muestra la fecha en la que el operario subió el reporte.</li>
+                <li><strong>Usuario:</strong> Indica el tipo de usuario que ha presentado el informe.</li>
+                <li><strong>Visualizar:</strong> Ofrece un enlace directo para acceder al reporte detallado del operario seleccionado.</li>
+            </ul>
+            <p>Además, se facilita la opción de descargar el informe directamente desde esta sección, eliminando la necesidad de ir al módulo específico de reportajes.</p>
+            <img src="Imagenes/reporte4.png" alt="administrador" class="ImagenReporte4">
+            <p>Para una navegación conveniente, se incluyen enlaces que permiten regresar a la página anterior o volver al inicio, brindando al usuario la libertad de elegir la dirección de su navegación según sus necesidades.</p>
+            <p>Esta mejora en la interfaz proporciona una experiencia más eficiente y centrada en el usuario al reportar y analizar las áreas producidas por el operario en un periodo específico.</p>
+
+
+            <h2>Seguimiento de Inventario de Tubos</h2>
+            <p>En la ventana de inventario, se lleva a cabo un seguimiento detallado de las cantidades que entran y salen, así como del stock general relacionado con todas las referencias de tubos gestionadas por la empresa.</p>
+            <p>La interfaz de usuario presenta, en la parte superior izquierda, la información y la foto del administrador para una rápida identificación. En el lado derecho, se dispone de un formulario de búsqueda que permite ingresar la información deseada. Al completar los datos y hacer clic en el ícono de búsqueda, se generan resultados filtrados de acuerdo con la solicitud del usuario.</p>
+            <img src="Imagenes/inventario producido.jpeg" alt="administrador" class="ImagenProducido">
+            <p>En la mitad de la página, se encuentra un cuadro con columnas que detallan información clave, como item, tipo de producto, área, labor y cantidad total. Estos campos muestran la información específica filtrada previamente.</p>
+            <p>En la parte inferior derecha, se ubican botones funcionales, como el de descarga, que permite obtener una copia de la filtración realizada. Más abajo, se encuentran botones para regresar a la página anterior (atras) y volver al inicio.</p>
+            <p>Finalmente, esta ventana cuenta con una alerta de notificaciones, representada por un icono de campana en la parte superior derecha. Esta función permite mantener al usuario informado sobre cualquier novedad o alerta relevante en relación con el inventario y las operaciones asociadas.</p>
+            <p>Este diseño busca proporcionar una experiencia de usuario intuitiva y eficiente, facilitando la gestión y supervisión efectiva del inventario de tubos en la empresa.</p>
+
+
+            <h2>Gestión de Insumos</h2>
+            <p>En este módulo, la interfaz se inicia con una barra de búsqueda, destacando una fecha en la parte superior que indica el periodo actual de búsqueda. Este diseño proporciona un contexto temporal claro mientras se busca el insumo de interés. Al mismo tiempo, se ofrece un filtro adicional para seleccionar el área específica del tipo de operario que se desea visualizar.</p>
+            <img src="Imagenes/Inventario de insumos.jpeg " alt="administrador" class="ImagenInsumo">
+            <p>La tabla presenta información detallada sobre los insumos, con los siguientes campos:</p>
+            <img src="Imagenes/Producido1.png" alt="administrador" class="ImagenProducido1">
+            <ul>
+                <li><strong>Serial:</strong> Este campo representa el código único asignado a cada producto, facilitando una búsqueda más eficiente y precisa.</li>
+                <li><strong>Tipo de Insumo:</strong> Muestra la naturaleza del insumo, ya sea un tubo, tela o pintura, proporcionando una categorización clara.</li>
+                <li><strong>Referencia:</strong> Detalla las características del insumo, indicando su tamaño o cualquier otra información relevante.</li>
+                <li><strong>Cantidad Total:</strong> Brinda una visión general de la cantidad total del insumo disponible, permitiendo una evaluación rápida del nivel de existencias.</li>
+            </ul>
+            <p>Asimismo, se integra una función de descarga que permite al usuario obtener un archivo con la información de manera conveniente.</p>
+
+
+            <h2>Gestión de Proveedores</h2>
+            <p>En este módulo, la visualización de proveedores comienza con una herramienta de búsqueda para facilitar la localización eficiente de proveedores específicos. Además, se presenta un botón que permite la creación de un nuevo proveedor,
+            simplificando el proceso de incorporación de nuevos socios comerciales.</p>
+            <img src="Imagenes/proveedores3.png" alt="administrador" class="ImagenProveedor3">
+            <img src="Imagenes/proveedores.jpeg " alt="administrador" class="ImagenProveedor">
+            <p>La tabla de proveedores exhibe la siguiente información detallada:</p>
+            <img src="Imagenes/proveedores2.png" alt="administrador" class= "ImagenProveedor2">
+            <div class="info-item">
+            <strong>Nombre del Proveedor:</strong> Este campo alberga el nombre distintivo del proveedor, identificando la entidad que suministra los materiales, como "ACEROS LA PAZ", "TELAS SAS", o "ESPUMADOS CIA".
+            </div>
+            <div class="info-item">
+            <strong>Área de Insumos:</strong> Se especifica el área particular a la que está asignado el proveedor, ofreciendo una clasificación clara y eficaz.
+            </div>
+            <div class="info-item">
+            <strong>Nombre de Contacto:</strong> Este campo presenta el nombre principal de contacto del proveedor, por ejemplo, "Rodrigo Garzón", facilitando una conexión directa con el responsable.
+            </div>
+            <div class="info-item">
+            <strong>NIT (Número de Identificación Tributaria):</strong> Se muestra el número de documento tributario del proveedor, proporcionando un identificador único para fines administrativos.
+            </div>
+            <div class="info-item">
+            <strong>Código:</strong> Un código único asignado al proveedor, facilitando la identificación y organización eficiente.
+            </div>
+            <div class="info-item">
+            <strong>Correo:</strong> La dirección de correo electrónico a través de la cual se puede establecer contacto con el proveedor.
+            </div>
+
+            <p>Al final de cada entrada en la tabla, se encuentran tres botones:</p>
+            <img src="Imagenes/proveedores4.png" alt="administrador" class="ImagenProveedor4">
+            <ul>
+                <li><strong>Bloquear:</strong> Permite suspender temporalmente al proveedor, sujeto a activación por parte del administrador.</li>
+                <li><strong>Editar:</strong> Facilita la modificación de la información del proveedor para reflejar cambios o actualizaciones.</li>
+                <li><strong>Borrar:</strong> Proporciona la opción de eliminar la entrada del proveedor, útil en situaciones donde la colaboración ha concluido.</li>
+            </ul>
+            <p>Este diseño intuitivo y detallado del módulo de proveedores ofrece una gestión eficaz y ordenada de los socios comerciales, brindando herramientas para ajustar, actualizar o desactivar colaboraciones de manera oportuna.</p>
+
+
+            <h2>Creación y Edición de Proveedores</h2>
+            <p>Cuando se selecciona la opción de crear un nuevo proveedor, se accede a un módulo diseñado para facilitar la introducción eficiente de información. Este proceso se inicia con una barra de búsqueda que agiliza la localización de operarios existentes para su edición.</p>
+            <img src="Imagenes/crear-editar -proveedor.jpeg" alt="administrador" class="ImagenProveedorCrearEditar">
+            <p>El formulario de creación o edición de proveedores comprende los siguientes campos:</p>
+            <img src="Imagenes/proveedoresCrear1.png" alt="administardor" class="Imagencrear1">
+            
+            <div class="info-item">
+                <strong>Nombre del Proveedor:</strong> Este campo permite ingresar el nombre distintivo del proveedor, estableciendo su identidad de manera clara.
+            </div>
+            <div class="info-item">
+                <strong>NIT (Número de Identificación Tributaria):</strong> Aquí se introduce el número tributario del proveedor, proporcionando un identificador único para fines fiscales.
+            </div>
+            <div class="info-item">
+                <strong>Código:</strong> Este campo se utiliza para asignar un código único al proveedor, simplificando su identificación y clasificación.
+            </div>
+            <div class="info-item">
+                <strong>Correo:</strong> Se especifica la dirección de correo electrónico a través de la cual se puede establecer contacto con el proveedor.
+            </div>
+            <div class="info-item">
+                <strong>Nombre del Contacto:</strong> Aquí se introduce el nombre principal de la persona de contacto del proveedor.
+            </div>
+            <div class="info-item">
+                <strong>Apellido del Contacto:</strong> Se proporciona espacio para ingresar el apellido del contacto principal del proveedor.
+            </div>
+            <div class="info-item">
+                <strong>Área Definida del Proveedor:</strong> Este campo se utiliza para establecer la área específica a la que está asignado el proveedor, facilitando su clasificación.
+            </div>
+
+            <p>Al finalizar la inserción de datos, se presentan dos botones:</p>
+        
+             <ul>
+                <li><strong>Guardar:</strong> Este botón es responsable de almacenar los datos en la base de datos, asegurando que la información del proveedor se registre de manera efectiva.</li>
+                <img src="Imagenes/guardar1.png" alt="administrador" class="ImagenGuardar">
+                <li><strong>Cancelar:</strong> En caso de desistir del proceso, este botón permite anular la operación, asegurando que no se guarden cambios no deseados.</li>
+                <img src="Imagenes/cancelar.png" alt="administrador" class="ImagenCancelar">
+
+            </ul>
+            <p>Este diseño del formulario de creación y edición de proveedores se enfoca en la simplicidad y eficacia, brindando una interfaz intuitiva para la gestión ágil y precisa de la información del proveedor en la base de datos del sistema.</p>
+            
+
+            <img src="Imagenes/Solicitudes.jpeg" alt="administrador" class="ImagenSolicitud">
+            
+        </div>
+
+
+        <div id="Operario" class="Parrafo">
+            <h2>Operarios Especializados, Suministros Garantizados</h2>
+            <p>En Gafra, reconocemos la importancia de la especialización. Por ello, nuestro sistema permite asignar tareas específicas a operarios expertos en tubería, costura, corte y ensamble. Cada operario recibe sus insumos de manera eficiente y oportuna, garantizando un flujo de trabajo continuo y optimizado.</p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

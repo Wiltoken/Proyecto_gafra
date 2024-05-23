@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'poppins', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body {
@@ -15,8 +15,108 @@ body {
   height: 100vh;
   background-image: url(img/a.jpg);
   /*background: linear-gradient(rgb(203,219,238),#3eacbb,#dae5f5);*/
+
 }
 
+/* siderbar */
+.container{
+  width: 15.8%;
+  min-width: 15.8vh;
+}
+
+.sidebar{
+  width: 256px;
+  height: 80.1vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 30px;
+}
+
+.sidebar .head{
+  display: flex;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.user-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.user-details .title .menu .title {
+  font-size: 10px;
+  font-weight: 500;
+  color: #757575;
+  text-transform: uppercase;
+}
+
+.user-details .name {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.menu ul li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.menu ul li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #757575;
+  text-decoration: none;
+  padding: 12px 8px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.menu ul li:hover a,
+.menu ul li.active a {
+  color: #000;
+  background-color: #f6f6f6;
+}
+
+.menu ul li .icon{
+  font-size: 20px;
+}
+
+.menu ul li .text{
+  flex: 1;
+}
+.menu ul li .arrow{
+  font-size: 14px;
+}
+
+.menu .sub-menu{
+  margin-left: 20px;
+  padding-left: 20px;
+  padding-top: 5px;
+  border-left: 1px solid #f6f6f6;
+}
+
+
+
+
+/* siderbar */
+
+ /*header*/
 .header {
   position: fixed;
   top: 0;
@@ -144,6 +244,7 @@ body {
   }
 
 }
+ /*header*/
 
 .tarjeta {
   position: relative;
@@ -369,3 +470,20 @@ body {
   margin-top: .5em;
   cursor: pointer;
 }
+
+/* Estilos para el footer */
+footer {
+  background-color: rgba(0, 0, 0, .1); 
+
+  color: #fff; 
+  padding: 20px; 
+  text-align: center; 
+  position: fixed; 
+  width: 100%; 
+  bottom: 0; 
+}
+
+footer p {
+  margin: 5px 0;
+}
+/* footer*/
