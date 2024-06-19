@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  min-height: 100vh;
+  height: 100vh;
+  background-image: url(img/a.jpg);
+}
+
+
+
+/* BREAKPOINTS */
+@media (max-width: 992px) {
+  .header {
+    padding: 1.3rem 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .icons {
+    display: inline-flex;
+  }
+
+  #check:checked ~ .icons #menu-icon {
+    display: none;
+  }
+
+  #check:checked ~ .icons #close-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1);
+    overflow: hidden;
+    transition: .3s ease;
+  }
+
+  #check:checked ~ .navbar {
+    height: 17.7rem;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: .3s ease;
+  }
+
+  #check:checked ~ .navbar a {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: calc(.15s * var(--i));
+  }
+
+/*HEADER*/
+}
+.header-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 92%;
+  height: 80px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  transition: background 0.3s ease;
+}
+
+.header-container:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.header-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: 0.5s;
+}
+
+.header-container:hover::after {
+  left: 100%;
+}
+
+.header-logo {
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.header-logo img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+}
+
+.header-content h1 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.header-content p {
+  font-size: 1rem;
+  margin: 5px 0 0;
+}
+
+/* SLIDER */
+.swiper {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 35em;
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  width: 25em;
+  height: 90%;
+  background-color: #fff;
+  border-radius: 2em;
+  box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+  padding: 2em 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 2em;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+  filter: blur(1px);
+}
+
+.card__image {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  border: .5em solid #f7f7f7;
+  box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.card__image img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.card__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card__text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666;
+  margin: 1em 0;
+}
+
+.card__btn {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #1e90ff;
+  padding: .5em 1.5em;
+  border-radius: 2em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color .3s ease;
+}
+
+.card__btn:hover {
+  background-color: #1c86ee;
+}
+
+.swiper-pagination {
+  bottom: 10px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000;
+}
+
+
+
+/* FOOTER */
+footer {
+  background-color: rgba(0, 0, 0, .5);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

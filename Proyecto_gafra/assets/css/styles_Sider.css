@@ -1,0 +1,248 @@
+/* Estilo mejorado para la barra lateral y el perfil centrado */
+
+/* ------------ GOOGLE FONTS ------------ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* ------------ VARIABLES ------------ */
+:root {
+    /* FONT */
+    --font: 'Poppins', sans-serif;
+
+    /* COLORS */
+    --body-color: #e4e9f7;
+    --sidebar-color: #fff;
+    --text-color: #707070;
+    --color: #9176FF;
+}
+
+/* ------------ BASE ------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    height: 100vh;
+    background-color: var(--body-color);
+}
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Perfil */
+.profile {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30px;
+    /* Ajusta según tu diseño */
+    z-index: 1000;
+    /* Asegura que el perfil esté por encima de la barra lateral */
+    transition: top 0.4s ease;
+    /* Transición suave para el perfil al abrir/cerrar la barra */
+}
+
+.profile img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.profile h3 {
+    color: #0f0d0d;
+    margin: 10px 0 5px;
+}
+
+.profile p {
+    color: rgb(12, 14, 15);
+    font-size: 14px;
+}
+
+/* Barra lateral */
+.sidebar {
+    background-color: var(--sidebar-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 7em;
+    padding: 1em 0;
+    box-shadow: 0 1em 1em rgba(0, 0, 0, .1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: width .4s ease;
+    z-index: 999;
+    /* Asegura que la barra lateral esté debajo del perfil */
+}
+
+.sidebar__logo-name,
+.sidebar__link-name {
+    display: none;
+    white-space: nowrap;
+}
+
+.sidebar__top-content {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar__logo {
+    width: 3em;
+    border-radius: .3em;
+}
+
+.sidebar__arrow {
+    background-color: var(--color);
+    position: absolute;
+    right: -0.5em;
+    top: 2.5em;
+    font-size: 2rem;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: .1em 0 .2em rgba(0, 0, 0, .2);
+    cursor: pointer;
+}
+
+.sidebar__links {
+    margin-top: 12em;
+    height: 100%;
+}
+
+.sidebar__link {
+    margin-bottom: 2em;
+}
+
+.sidebar__link a {
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+}
+
+.sidebar__link-icon {
+    font-size: 1.8rem;
+}
+
+.sidebar__link-name {
+    font-size: 1.3rem;
+    margin-left: 1em;
+}
+
+.sidebar__link--logout {
+    position: absolute;
+    bottom: 0;
+}
+
+/* tooltip */
+.sidebar__link a:hover .sidebar__link-name {
+    display: inline-block;
+    position: absolute;
+    left: 100%;
+    background-color: #f7fbfc;
+    padding: .3em;
+    border-radius: .5em;
+}
+
+.sidebar__link--logout a:hover .sidebar__link-name {
+    left: 200%;
+}
+
+/* Abrir la barra lateral */
+.sidebar.active {
+    width: 15em;
+    align-items: start;
+    padding-left: 1em;
+}
+
+.sidebar.active .sidebar__logo-name,
+.sidebar.active .sidebar__link-name {
+    display: inline-block;
+}
+
+.sidebar.active .sidebar__logo-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-left: .8em;
+}
+
+.sidebar.active .sidebar__arrow {
+    transform: rotate(180deg);
+}
+
+.sidebar.active .sidebar__links {
+    padding-left: 1em;
+}
+
+.sidebar.active .sidebar__link:hover a {
+    color: var(--color);
+}
+
+/* Quitar tooltip */
+.sidebar.active .sidebar__link a:hover .sidebar__link-name {
+    position: relative;
+    left: 0;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* Centro del perfil cuando la barra lateral está activa */
+.sidebar.active~.profile {
+    top: 50%;
+    /* Ajusta según tu diseño */
+    transform: translateY(-50%);
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        padding: 0.5em;
+    }
+
+    .sidebar.active {
+        width: 100%;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .sidebar.active .sidebar__links {
+        margin-top: 1em;
+        /* Ajusta según tu diseño */
+    }
+
+    .sidebar__arrow {
+        display: none;
+        /* Opcional: ocultar la flecha en pantallas pequeñas */
+    }
+
+    .profile {
+        position: relative;
+        top: 30px;
+        /* Ajusta según tu diseño */
+        transform: none;
+    }
+}
